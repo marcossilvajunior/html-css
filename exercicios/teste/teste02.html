@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <h1>Minhas Tarefas</h1>
+    <ul id="tarefas">
+        <li>Tarefa 1</li>
+        <li>Tarefa 2</li>
+        <li>Tarefa 3</li>
+    </ul>
+    <input type="text" id="novaTarefa" placeholder="Nova Tarefa">
+    <button onclick="adicionarTarefa()">Adicionar</button>
+    <script>
+        function adicionarTarefa() {
+            var novaTarefa = document.getElementById("novaTarefa").value;
+            var lista = document.getElementById("tarefas");
+            var novaLi = document.createElement("li");
+            novaLi.appendChild(document.createTextNode(novaTarefa));
+            lista.appendChild(novaLi);
+        }    
+    </script>
+    <p><a href="index.html">1</a></p>
+</body>
+</html>
